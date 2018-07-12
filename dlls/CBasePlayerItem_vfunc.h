@@ -1,0 +1,24 @@
+#include "CBaseAnimating_vfunc.h"
+void __thiscall (*CBasePlayerItem::AddToPlayer)(CBasePlayerItem* this, CBasePlayer*);
+void __thiscall (*CBasePlayerItem::AddDuplicate)(CBasePlayerItem* this, CBasePlayerItem*);
+void __thiscall (*CBasePlayerItem::GetItemInfo)(CBasePlayerItem* this, ItemInfo*);
+void __thiscall (*CBasePlayerItem::CanDeploy)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::CanDrop)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::Deploy)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::ph89)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::IsWeapon)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::CanHolster)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::Holster)(CBasePlayerItem* this, int);
+void __thiscall (*CBasePlayerItem::UpdateItemInfo)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::ItemPreFrame)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::ItemPostFrame)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::Drop)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::Kill)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::AttachToPlayer)(CBasePlayerItem* this, CBasePlayer*);
+void __thiscall (*CBasePlayerItem::PrimaryAmmoIndex)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::SecondaryAmmoIndex)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::UpdateClientData)(CBasePlayerItem* this, CBasePlayer*);
+void __thiscall (*CBasePlayerItem::GetWeaponPtr)(CBasePlayerItem* this);
+void __thiscall (*CBasePlayerItem::GetMaxSpeed)(CBasePlayerItem* this);
+//void __thiscall (*CBasePlayerItem::iItemSlot)(CBasePlayerItem* this);
+int __thiscall (*CBasePlayerItem::pf104[27])(CBasePlayerItem* this, ...);

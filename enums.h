@@ -1,0 +1,89 @@
+/***
+*
+*    Copyright (c) 1996-2002, Valve LLC. All rights reserved.
+*
+*    This product contains software technology licensed from Id
+*    Software, Inc. ("Id Technology").  Id Technology (c) 1996 Id Software, Inc.
+*    All Rights Reserved.
+*
+*    Compiling or running this code may violate patents in certain countries.
+*
+*   Use, distribution, and modification of this source code and/or resulting
+*   object code is restricted to non-commercial enhancements to products from
+*   Valve LLC.  All other use, distribution, or modification is prohibited
+*   without written permission from Valve LLC.
+*
+****/
+
+typedef unsigned char BYTE;
+typedef enum { USE_OFF = 0, USE_ON = 1, USE_SET = 2, USE_TOGGLE = 3 } USE_TYPE;
+
+typedef enum {
+	NO_SVC = 0, SVC_NOP, SVC_DISCONNECT, SVC_EVENT, SVC_VERSION, SVC_SETVIEW, SVC_SOUND, SVC_TIME, SVC_PRINT,
+	SVC_STUFFTEXT, SVC_SETANGLE, SVC_SERVERINFO, SVC_LIGHTSTYLE, SVC_UPDATEUSERINFO, SVC_DELTADESCRIPTION, SVC_CLIENTDATA, SVC_STOPSOUND,
+	SVC_PINGS, SVC_PARTICLE, SVC_DAMAGE, SVC_SPAWNSTATIC, SVC_EVENT_RELIABLE, SVC_SPAWNBASELINE, SVC_TEMPENTITY, SVC_SETPAUSE,
+	SVC_SIGNONNUM, SVC_CENTERPRINT, SVC_KILLEDMONSTER, SVC_FOUNDSECRET, SVC_SPAWNSTATICSOUND, SVC_INTERMISSION, SVC_FINALE, SVC_CDTRACK,
+	SVC_RESTORE, SVC_CUTSCENE, SVC_WEAPONANIM, SVC_DECALNAME, SVC_ROOMTYPE, SVC_ADDANGLE, SVC_NEWUSERMSG, SVC_PACKETENTITIES,
+	SVC_DELTAPACKETENTITIES, SVC_CHOKE, SVC_RESOURCELIST, SVC_NEWMOVEVARS, SVC_RESOURCEREQUEST, SVC_CUSTOMIZATION, SVC_CROSSHAIRANGLE, SVC_SOUNDFADE,
+	SVC_FILETXFERFAILED, SVC_HLTV, SVC_DIRECTOR, SVC_VOICEINIT, SVC_VOICEDATA, SVC_SENDEXTRAINFO, SVC_TIMESCALE
+} SVC_LIST;
+
+typedef enum { MSG_BROADCAST = 0, MSG_ONE, MSG_ALL, MSG_INIT, MSG_PVS, MSG_PAS, MSG_PVS_R, MSG_PAS_R, MSG_ONE_UNRELIABLE, MSG_SPEC } MSG_DEST;
+
+typedef enum
+{
+
+        MONSTERSTATE_NONE = 0,
+        MONSTERSTATE_IDLE,
+        MONSTERSTATE_COMBAT,
+        MONSTERSTATE_ALERT,
+        MONSTERSTATE_HUNT,
+        MONSTERSTATE_PRONE,
+        MONSTERSTATE_SCRIPT,
+        MONSTERSTATE_PLAYDEAD,
+        MONSTERSTATE_DEAD
+
+} MONSTERSTATE;
+
+typedef enum
+{
+        TS_AT_TOP,
+        TS_AT_BOTTOM,
+        TS_GOING_UP,
+        TS_GOING_DOWN
+} TOGGLE_STATE;
+
+#include "dlls/activity.h"
+
+typedef enum {
+	FL_FLY = (1<<0),
+	FL_SWIM = (1<<1),
+	FL_CONVEYOR = (1<<2),
+	FL_CLIENT = (1<<3),
+	FL_INWATER = (1<<4),
+	FL_MONSTER = (1<<5),
+	FL_GODMODE = (1<<6),
+	FL_NOTARGET = (1<<7),
+	FL_SKIPLOCALHOST = (1<<8),
+	FL_ONGROUND = (1<<9),
+	FL_PARTIALGROUND = (1<<10),
+	FL_WATERJUMP = (1<<11),
+	FL_FROZEN = (1<<12),
+	FL_FAKECLIENT = (1<<13),
+	FL_DUCKING = (1<<14),
+	FL_FLOAT = (1<<15),
+	FL_GRAPHED = (1<<16),
+	FL_IMMUNE_WATER = (1<<17),
+	FL_IMMUNE_SLIME = (1<<18),
+	FL_IMMUNE_LAVA = (1<<19),
+	FL_PROXY = (1<<20),
+	FL_ALWAYSTHINK = (1<<21),
+	FL_BASEVELOCITY = (1<<22),
+	FL_MONSTERCLIP = (1<<23),
+	FL_ONTRAIN = (1<<24),
+	FL_WORLDBRUSH = (1<<25),
+	FL_SPECTATOR = (1<<26),
+	FL_CUSTOMENTITY = (1<<29),
+	FL_KILLME = (1<<30),
+	FL_DORMANT = (1<<31)
+} PEV_FLAGS;
