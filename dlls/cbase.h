@@ -1,6 +1,15 @@
 
 #include "monsterevent.h"
 
+typedef enum
+{
+	UNASSIGNED,
+	TERRORIST,
+	CT,
+	SPECTATOR,
+
+} TeamName;
+
 struct EHANDLE
 {
   edict_t *m_pent;
@@ -9,6 +18,7 @@ struct EHANDLE
 
 struct CSquadMonster;
 
+struct CBaseEntity;
 struct CBaseEntity_vfunc
 {
 #include "CBaseEntity_vfunc.h"
@@ -27,6 +37,7 @@ struct CBaseDelay
 #include "CBaseDelay_pdata.h"
 };
 
+struct CBaseAnimating;
 struct CBaseAnimating_vfunc
 {
 #include "CBaseAnimating_vfunc.h"

@@ -36,15 +36,6 @@ typedef enum
 
 typedef enum
 {
-	UNASSIGNED,
-	TERRORIST,
-	CT,
-	SPECTATOR,
-
-} TeamName;
-
-typedef enum
-{
 	MODEL_UNASSIGNED,
 	MODEL_URBAN,
 	MODEL_TERROR,

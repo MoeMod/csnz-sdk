@@ -1,6 +1,8 @@
 
 #include "player_const.h"
 
+struct CBasePlayer;
+
 struct CBasePlayer_vfunc
 {
 #include "CBasePlayer_vfunc.h"

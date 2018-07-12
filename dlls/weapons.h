@@ -1,5 +1,6 @@
 #include "weapons_const.h"
 
+struct CBasePlayerItem;
 struct CBasePlayerItem_vfunc
 {
 	#include "CBasePlayerItem_vfunc.h"
@@ -10,7 +11,7 @@ struct CBasePlayerItem
 	#include "CBasePlayerItem_pdata.h"
 };
 
-
+struct CBasePlayerWeapon;
 struct CBasePlayerWeapon_vfunc
 {
 	#include "CBasePlayerWeapon_vfunc.h"
