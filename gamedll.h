@@ -4,3 +4,5 @@
 #include "dlls/weapons.h"
 
 #include "dlls/func_break.h"
+
+#include "dlls/zbs_break.h"
