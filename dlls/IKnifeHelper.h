@@ -22,7 +22,14 @@ struct KnifeModelInfo // sizeof == 28
 	int flDeployNextIdleTime;
 };
 
-struct IKnifeHelper;
+struct IKnifeHelper_vfunc;
+struct IKnifeHelper
+{
+	IKnifeHelper_vfunc *vfptr;
+	// TBD
+};
+//struct CKnife;
+typedef CBasePlayerWeapon CKnife;
 
 struct IKnifeHelper_vfunc
 {
@@ -35,8 +42,8 @@ struct IKnifeHelper_vfunc
 	void __thiscall (*IKnifeHelper::DelayPrimaryAttack)(IKnifeHelper* this, CKnife *knife);
 	void __thiscall (*IKnifeHelper::DelaySecondaryAttack)(IKnifeHelper* this, CKnife *knife);
 	BOOL __thiscall (*IKnifeHelper::UseDecrement)(IKnifeHelper* this, CKnife *knife); // always return 0
-	void __thiscall (*IKnifeHelper::ScaleDamagePrimaryAttack)(IKnifeHelper* this, CKnife *, float in, float &out);
-	void __thiscall (*IKnifeHelper::ScaleDamageSecondaryAttack)(IKnifeHelper* this, CKnife *, float in, float &out);
+	void __thiscall (*IKnifeHelper::ScaleDamagePrimaryAttack)(IKnifeHelper* this, CKnife *, float in, float *out);
+	void __thiscall (*IKnifeHelper::ScaleDamageSecondaryAttack)(IKnifeHelper* this, CKnife *, float in, float *out);
 	void __thiscall (*IKnifeHelper::GetPrimaryAttackDistance)(IKnifeHelper* this, CKnife *knife); // null, called from CKnife::PrimaryAttack
 	void __thiscall (*IKnifeHelper::GetSecondaryAttackDistance)(IKnifeHelper* this, CKnife *knife); // null
 	void __thiscall (*IKnifeHelper::GetKnockBackData)(IKnifeHelper* this, CKnife *knife); // GetKnockBackData from hw??
@@ -46,10 +53,4 @@ struct IKnifeHelper_vfunc
 	void __thiscall (*IKnifeHelper::AddToPlayer)(IKnifeHelper* this, CKnife *knife);// 
 	void __thiscall (*IKnifeHelper::ItemPostFrame)(IKnifeHelper* this, CKnife *knife); // null 
 	void __thiscall (*IKnifeHelper::ph19)(IKnifeHelper* this, CKnife *knife); // null*/
-};
-
-struct IKnifeHelper
-{
-	IKnifeHelper_vfunc *vfptr;
-	// TBD
 };
