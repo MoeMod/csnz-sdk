@@ -6,3 +6,6 @@
 #include "dlls/func_break.h"
 
 #include "dlls/zbs_break.h"
+
+#include "dlls/IKnifeHelper.h"
+#include "dlls/KnifeID.h"
