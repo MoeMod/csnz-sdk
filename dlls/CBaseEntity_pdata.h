@@ -1,4 +1,5 @@
 //void *vfptr;
+void *ph1;
 entvars_t *pev;
 CBaseEntity *m_pGoalEnt;
 CBaseEntity *m_pLink;

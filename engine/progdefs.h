@@ -88,14 +88,14 @@ typedef struct entvars_s
   float renderamt;
   vec3_t rendercolor;
   int renderfx;
-  float health; // ok
-  float frags; // ok
+  float health;
+  float frags;
   int ph42;
   int ph43;
   int ph44;
-  int weapons;	// ok
+  int weapons;
   float takedamage;
-  int deadflag; // ok
+  int deadflag;
   vec3_t view_ofs;
   int button;
   int impulse;
@@ -105,16 +105,17 @@ typedef struct entvars_s
   edict_t *aiment;
   edict_t *owner;
   edict_t *groundentity;
-  int spawnflags; // ok
+  int spawnflags;
   int flags; // ok
   int ph106;
   int colormap;
   int team;
-  float max_health;	// ok
+  float max_health;
   float teleport_time;
   float armortype;
-  float armorvalue; // ok
+  float armorvalue;
   int ph123;
+  int ph124;
   int waterlevel;	// ok
   int watertype;
   string_t target;
